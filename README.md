@@ -13,4 +13,7 @@ Features
 * 5V power pins (max current: 50mA), for supplying low current device.
 * The device uses one the most popular RF 433MHz Transmitter (cheap and very popular).
 
+![PCB](https://github.com/OsoianMarcel/attiny-car-rf-remote/blob/main/hdw/photos/assembled-pcb.webp?raw=true)
+
+
 ... description in progress
