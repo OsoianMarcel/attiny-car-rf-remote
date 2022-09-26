@@ -13,7 +13,11 @@ Features
 * 5V power pins (max current: 50mA), for supplying low current device.
 * The device uses one the most popular RF 433MHz Transmitter (cheap and very popular).
 
-![PCB](https://github.com/OsoianMarcel/attiny-car-rf-remote/blob/main/hdw/photos/assembled-pcb.webp?raw=true)
+## Hardware images
+<img src="https://github.com/OsoianMarcel/attiny-car-rf-remote/blob/main/hdw/images/pcb-preview-top.png?raw=true" width="45%"></img> <img src="https://github.com/OsoianMarcel/attiny-car-rf-remote/blob/main/hdw/images/pcb-preview-bottom.png?raw=true" width="45%"></img> 
 
+<img src="https://github.com/OsoianMarcel/attiny-car-rf-remote/blob/main/hdw/images/pcb-case-open-top.png?raw=true" width="23%"></img> <img src="https://github.com/OsoianMarcel/attiny-car-rf-remote/blob/main/hdw/images/pcb-case-open-angle.png?raw=true" width="23%"></img> <img src="https://github.com/OsoianMarcel/attiny-car-rf-remote/blob/main/hdw/images/pcb-case-closed-top.png?raw=true" width="23%"></img> <img src="https://github.com/OsoianMarcel/attiny-car-rf-remote/blob/main/hdw/images/pcb-case-closed-angle.png?raw=true" width="23%"></img> 
 
-... description in progress
+![PCB schematic V0.1](https://github.com/OsoianMarcel/attiny-car-rf-remote/blob/main/hdw/pcb/schematic-v0.1.png?raw=true)
+
+<img src="https://github.com/OsoianMarcel/attiny-car-rf-remote/blob/main/hdw/photos/assembled-pcb.webp?raw=true" width="23%"></img> <img src="https://github.com/OsoianMarcel/attiny-car-rf-remote/blob/main/hdw/photos/enclosure-open.webp?raw=true" width="23%"></img> <img src="https://github.com/OsoianMarcel/attiny-car-rf-remote/blob/main/hdw/photos/enclosure-and-lead.webp?raw=true" width="23%"></img> <img src="https://github.com/OsoianMarcel/attiny-car-rf-remote/blob/main/hdw/photos/enclosure-closed.webp?raw=true" width="23%"></img> 
