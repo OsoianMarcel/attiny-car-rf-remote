@@ -11,10 +11,10 @@ struct LedS {
 
 typedef struct LedS Led;
 
-extern void Led_Init(Led *led);
-extern void Led_Uninit(Led *led);
-extern void Led_On(Led *led);
-extern void Led_Off(Led *led);
-extern void Led_Toggle(Led *led);
+extern void led_init(Led *led);
+extern void led_uninit(Led *led);
+extern void led_on(Led *led);
+extern void led_off(Led *led);
+extern void led_toggle(Led *led);
 
 #endif

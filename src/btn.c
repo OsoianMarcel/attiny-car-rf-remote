@@ -1,10 +1,12 @@
 #include "btn.h"
 
-void btn_init(Btn_t *btn) {
+void btn_init(Btn_t *btn, uint8_t pullup) {
 	// Input mode
 	*btn->DDR &= ~(1 << btn->btn_pin); 
-	// Pull-up resistor is not needed
-	// *btn->PORT |= (1 << btn->btn_pin); 
+	if (pullup) {
+		// Activate the internal pull-up resistor
+		*btn->PORT |= (1 << btn->btn_pin); 
+	}
 }
 
 uint8_t btn_get_state(Btn_t *btn) {

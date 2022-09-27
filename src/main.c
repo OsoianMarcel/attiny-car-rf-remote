@@ -67,17 +67,17 @@ void task0(void) {
 }
 
 void task1(void) {
-	Led_On(&led);
+	led_on(&led);
 	rf433_send_next_code(&rf433_scope, 3);
-	Led_Off(&led);
+	led_off(&led);
 	reset_task(1);
 }
 
 void task2(void) {
 	if (halfSecs == 0) {
-		Led_On(&led);
+		led_on(&led);
 	} else if (halfSecs == 1) {
-		Led_Off(&led);
+		led_off(&led);
 	}
 	
 	if (halfSecs >= 255) {
@@ -115,14 +115,14 @@ uint8_t setup(void) {
 		.prev_state = 0,
 		.ticks = 0
 	};
-	btn_init(&btn);
+	btn_init(&btn, 0);
 	
 	led = (Led){
 		.DDR = &DDRB,
 		.PORT = &PORTB,
 		.PIN = PB3
 	};
-	Led_Init(&led);
+	led_init(&led);
 	
 	timer0_init();
 	

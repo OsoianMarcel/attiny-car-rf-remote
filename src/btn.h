@@ -16,7 +16,7 @@ typedef struct Btn_s {
 	uint8_t click_ticks;
 } Btn_t;
 
-void btn_init(Btn_t *btn);
+void btn_init(Btn_t *btn, uint8_t pullup);
 uint8_t btn_get_state(Btn_t *btn);
 uint8_t btn_clicked(Btn_t *btn);
 
