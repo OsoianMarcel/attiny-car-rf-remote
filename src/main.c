@@ -80,7 +80,8 @@ void task2(void) {
 		led_off(&led);
 	}
 	
-	if (halfSecs >= 255) {
+	// 0.5 sec * 60 = ~30 sec
+	if (halfSecs >= 60) {
 		halfSecs = 0;
 	} else {
 		halfSecs++;
@@ -96,7 +97,7 @@ void task3(void) {
 
 void timer0_init(void) {
 	TCNT0 = 0; // Reset timer value
-	TCCR0B |= (1 << CS01); // Clock select /8 (overflow once in 2 ms)
+	TCCR0B |= (1 << CS01) | (1 << CS00); // Clock select /64 (overflow once in (1 / (8e6 / 64) * 255 * 1e3) = 2 ms)
 	TIMSK |= (1 << TOIE0); // Allow overflow interrupt
 }
 
