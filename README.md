@@ -1,6 +1,6 @@
-# Car Garage Door Remote (RF 433 Mhz)
+# Car Garage Door Remote (433 MHz)
 
-A device designed for controlling the remote garage doors (433Mhz). It can be powered and controlled from 7 to 30 volts which make it perfect for integrating and using in the cars.
+A device designed for controlling the remote garage doors (433Mhz). It can be powered and controlled from 7 to 30 volts, which make it perfect for integrating and using in the cars.
 
 ## Features
 
@@ -8,10 +8,10 @@ A device designed for controlling the remote garage doors (433Mhz). It can be po
 * The consumption: 9mA during idle, 20mA during transmission;
 * The input pin accepts a wide range of voltage: from 3.3V to 30V;
 * Overcurrent protection and reverse current protection;
-* The device uses one the most popular RF 433MHz Transmitter (cheap and very popular);
+* The device uses one of the most popular RF 433MHz transmitter (cheap and very popular);
 * JTAG pins (3x2) used for programming the microcontroller;
 * 5V power pins (max current: 50mA), for supplying low current device;
-* Transmission and idle indicator (the red led).
+* Transmission and idle indicator (the red LED).
 
 ## Hardware images
 
@@ -25,15 +25,14 @@ A device designed for controlling the remote garage doors (433Mhz). It can be po
 
 ## How it works 
 
-The device is powered and controlled via the connector J1, where the pin 1 (top, left) is GND,  pin 2 is VCC, and pin 3 is the input pin. The input pin (3) is expected to be connected to a car button (which usually supply ~12v during pressing). Once the device is triggered via the input pin (high level signal), the device will send the RF signal repeatedly (number of reapeats are defined in the code). Each time the sending is triggered the signal will be different (the radio signals are defined in the code). 
+The device is powered and controlled via the connector J1, where the pin 1 (top, left) is GND, pin 2 is VCC, and pin 3 is the input pin. The input pin (3) is expected to be connected to a car button (which usually supply ~12v during pressing). Once the device is triggered via the input pin (high level signal), the device will send the RF signal repeatedly (number of repeats are defined in the code). Each time the sending is triggered, the signal will be different (the radio signals are defined in the code).
 
-Warning: The device does not have a RF receiver, so it can not scan/copy a RF signal from an existing remote, so you need to do the reverse engineering of the RF signal and to add it manually in the code.
-If the device will get popularity, I’ll add this feature in the next versions.
+Warning: The device does not have an RF receiver, so it can not scan/copy an RF signal from an existing remote, so you need to do the reverse engineering of the RF signal and to add it manually in the code. If the device gets popularity, I’ll add this feature in the next versions.
 
 ## Precautions 
 
-* The device is not designed to be powered from the 5V connector (J4). The 5V connector was added to PCB mostly for debugging purposes, but it can also be used for powering a low power device with maximum current of 50mA (the higher current may overheat the voltage regulator);
-* You can try to power the device via 5V connector but you risk to damage the voltage regulator because of reverse current (OUT -> IN). For more information check the [LM7805 Datasheet](https://www.ti.com/lit/ds/symlink/lm7800.pdf) (section: Application and Implementation);
+* The device is not designed to be powered from the 5V connector (J4). The 5V connector was added to the PCB mostly for debugging purposes, but it can also be used for powering a low power device with maximum current of 50mA (the higher current may overheat the voltage regulator);
+* You can try to power the device via 5V connector, but you risk damaging the voltage regulator because of reverse current (OUT → IN). For more information, check the [LM7805 Datasheet](https://www.ti.com/lit/ds/symlink/lm7800.pdf) (section: Application and Implementation);
 * During programming the MCU, power the device via J1 connector and disconnect the 5v pin from the programmer (JTAG). I tested to power and program the device from JTAG and all went ok, it's up to you;
 * In the current PCB version, the MCU sleep mode can not be implemented, because the pin INT0 is triggered with high level signal, which can not wake up the MCU (attiny85) from sleep mode (check the [datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet.pdf) about low level interrupt on INT0); 
 * While idle, the device consumes 9mA, which may be too much for some car batteries, so to exclude the risk of draining the battery, the device has to be powered from ACC power line (the power is provided only then the ignition/engine is on).
@@ -43,8 +42,8 @@ If the device will get popularity, I’ll add this feature in the next versions.
 * Add a diode between OUT and IN pins of LM78L05, to protect it from damaging by reverse current (to exclude the risk of damaging during powering from 5V connector or JTAG connector);
 * Power the radio transmitter module with 12V (not 5V) to improve the range of radio signal;
 * Solder an antenna to the radio module;
-* Trigger the input pin by ground, which will reduce the number of componentes on PCB and also will make possible to put the MCU in sleep mode and wake it up by low level signal, which will reduce the power consumption significantly;
-* Use smaller SMD components to reduce the PCB size (1206 -> 0805);
+* Trigger the input pin by ground, which will reduce the number of components on PCB and also will make possible to put the MCU in sleep mode and wake it up by low level signal, which will reduce the power consumption significantly;
+* Use smaller SMD components to reduce the PCB size (1206 → 0805);
 * Move the fuse component in another PCB place or use a SMD fuse holder, to simplify the replacing;
 * Design a nicer PCB layout.
 
@@ -70,11 +69,11 @@ If the device will get popularity, I’ll add this feature in the next versions.
 
 Contributions to the project are always welcome!
 
-If you have an idea or you want to report any bugs or issues please do it through the [issue tracker].
+If you have an idea, or you want to report any bugs or issues, please do it through the [issue tracker].
 
 ## Disclaimer
 
-This is a hobby project made by an made by an enthusiast, not a professional.
+This is a hobby project by an enthusiast, not a professional.
 
 The device comes with no warranty. Everything that you do, you do at your own risk.
 
