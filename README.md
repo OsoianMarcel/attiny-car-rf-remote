@@ -45,6 +45,7 @@ Warning: The device does not have an RF receiver, so it can not scan/copy an RF 
 * Trigger the input pin by ground, which will reduce the number of components on PCB and also will make possible to put the MCU in sleep mode and wake it up by low level signal, which will reduce the power consumption significantly;
 * Use smaller SMD components to reduce the PCB size (1206 → 0805);
 * Move the fuse component in another PCB place or use a SMD fuse holder, to simplify the replacing;
+* The lithium capacitors can be replaced with high-value ceramic capacitors, which will reduce the PCB size significantly;
 * Design a nicer PCB layout.
 
 ## Used tools
